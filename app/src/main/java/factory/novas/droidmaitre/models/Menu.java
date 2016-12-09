@@ -1,5 +1,6 @@
 package factory.novas.droidmaitre.models;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
@@ -9,19 +10,19 @@ import java.util.LinkedList;
 public class Menu {
 
     // Un menú está compuesto por platos.
-    private LinkedList<Plato> mPlatos;
+    // http://stackoverflow.com/questions/322715/when-to-use-linkedlist-over-arraylist
+    // http://www.softwero.com/2012/10/cuando-usar-linkedlist-sobre-arraylist.html
+    private ArrayList<Plato> mPlatos;
 
-    public Menu(LinkedList<Plato> platos) {
-        mPlatos = platos;
-    }
+    public Menu() { mPlatos = new ArrayList<Plato>(); }
 
     // Getter.
-    public LinkedList<Plato> getPlatos() {
+    public ArrayList<Plato> getPlatos() {
         return mPlatos;
     }
 
     //Setter.
-    public void setPlatos(LinkedList<Plato> platos) {
+    public void setPlatos(ArrayList<Plato> platos) {
         mPlatos = platos;
     }
 
