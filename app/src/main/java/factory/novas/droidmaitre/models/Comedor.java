@@ -1,6 +1,6 @@
 package factory.novas.droidmaitre.models;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 /**
  * Created by Adrian on 6/12/16.
@@ -8,20 +8,21 @@ import java.util.LinkedList;
 
 public class Comedor {
 
-    private LinkedList<Mesa> mComedor;
+    private ArrayList<Mesa> mComedor;
 
     // Constructor
-    public Comedor(LinkedList<Mesa> comedor) {
-        mComedor = comedor;
+    public Comedor() {
+        mComedor = new ArrayList<Mesa>();
+        mComedor.add(new Mesa("Mesa 1", 1, new Menu(), 0.00f));
     }
 
     // Guetter
-    public LinkedList<Mesa> getComedor() {
+    public ArrayList<Mesa> getComedor() {
         return mComedor;
     }
 
     //Setter
-    public void setComedor(LinkedList<Mesa> comedor) {
+    public void setComedor(ArrayList<Mesa> comedor) {
         mComedor = comedor;
     }
 
